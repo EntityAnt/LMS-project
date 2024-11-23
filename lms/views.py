@@ -5,6 +5,7 @@ from rest_framework.viewsets import ModelViewSet
 
 from lms.models import Course, Lesson
 from lms.serializers import CourseSerializer, LessonSerializer
+from users.models import Payments
 
 
 class CourseViewSet(ModelViewSet):

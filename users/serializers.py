@@ -1,11 +1,17 @@
 from rest_framework.serializers import ModelSerializer
 
-from lms.models import Course, Lesson
+from users.models import User, Payments
 
 
 class UserSerializer(ModelSerializer):
     class Meta:
-        model = Course
+        model = User
+        fields = "__all__"
+
+
+class PaymentSerializer(ModelSerializer):
+    class Meta:
+        model = Payments
         fields = "__all__"
 
 
