@@ -11,8 +11,8 @@ app_name = LmsConfig.name
 
 router = SimpleRouter()
 router.register("", CourseViewSet)
-router.register("users", UserViewSet)
-router.register("payments", PaymentViewSet)
+router.register(r"users", UserViewSet, basename='users')
+router.register(r"payments", PaymentViewSet, basename='payments')
 
 urlpatterns = [
                   path("lessons/", LessonListApiView.as_view(), name="lessons_list"),

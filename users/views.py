@@ -9,10 +9,14 @@ class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+    def get_queryset(self):
+        return self.queryset.all()
+
 
 class PaymentViewSet(ModelViewSet):
     queryset = Payments.objects.all()
     serializer_class = PaymentSerializer
+
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     filterset_fields = ("paid_course", "paid_lesson", "payment_method")
     ordering_fields = ["date", ]
