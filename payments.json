@@ -1,0 +1,38 @@
+[
+  {
+    "model": "users.payments",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "date": "2024-11-23",
+      "paid_course": 2,
+      "paid_lesson": null,
+      "amount": "70000.00",
+      "payment_method": "╧хЁхтюф эр ёўхЄ"
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "date": "2024-11-23",
+      "paid_course": 4,
+      "paid_lesson": null,
+      "amount": "80000.00",
+      "payment_method": "═рышўэ√х"
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "date": "2024-11-23",
+      "paid_course": null,
+      "paid_lesson": 3,
+      "amount": "10000.00",
+      "payment_method": "╧хЁхтюф эр ёўхЄ"
+    }
+  }
+]
