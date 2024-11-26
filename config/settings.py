@@ -1,4 +1,5 @@
 import os
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -23,6 +24,7 @@ INSTALLED_APPS = [
     "users",
     "lms",
     "rest_framework",
+    "rest_framework_simplejwt",
     "django_filters",
 ]
 
@@ -56,13 +58,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-
 REST_FRAMEWORK = {
 
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
+    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny',],
 
 }
 
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+}
 
 DATABASES = {
     "default": {

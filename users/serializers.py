@@ -16,4 +16,5 @@ class UserSerializer(ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'email', 'phone', 'tg_nick', 'city', 'avatar', 'payments']
+        fields = "__all__"
+        # fields = ['id', 'email', 'phone', 'tg_nick', 'city', 'avatar', 'payments']
